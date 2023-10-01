@@ -1,0 +1,104 @@
+body {
+  padding: 100px 22%;
+  background-color: rgb(24, 12, 24);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.main-text {
+  animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* -------------------Loader1 --------------------- */
+.loader1 {
+  position: relative;
+  width: 733px;
+  height: 7px;
+  background: linear-gradient(to right, transparent, rgb(103, 27, 255));
+  overflow: hidden;
+}
+
+.loader1::after {
+  content: "";
+  position: absolute;
+  transform: translateX(-100%); /* Use transform, not translate */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgb(152, 200, 22),
+    transparent
+  ); /* Added a black color stop */
+  animation: load-animate 3s infinite;
+}
+
+/* ----------------Loader2 ---------------------------- */
+.loader2 {
+  position: relative;
+  width: 733px;
+  height: 7px;
+  background: linear-gradient(to right, transparent, rgb(255, 217, 27));
+  overflow: hidden;
+}
+
+.loader2::after {
+  content: "";
+  position: absolute;
+  transform: translateX(-100%); /* Use transform, not translate */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgb(16, 16, 228),
+    transparent
+  ); /* Added a black color stop */
+  animation: load-animate 3s infinite;
+}
+
+/* ----------------Loader 3----------------- */
+
+.loader3 {
+  position: relative;
+  width: 733px;
+  height: 7px;
+  background: linear-gradient(to right, transparent, rgb(255, 27, 221));
+  overflow: hidden;
+}
+
+.loader3::after {
+  content: "";
+  position: absolute;
+  transform: translateX(-100%); /* Use transform, not translate */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgb(222, 11, 99),
+    transparent
+  ); /* Added a black color stop */
+  animation: load-animate 3s infinite;
+}
+
+@keyframes load-animate {
+  100% {
+    transform: translateX(100%); /* Use transform, not translate */
+  }
+}
